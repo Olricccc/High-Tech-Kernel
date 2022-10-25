@@ -49,7 +49,15 @@ config IOSCHED_FIOPS
 	---help---
 	  This is an IOPS based I/O scheduler. It will try to distribute
           IOPS equally among all processes in the system. It's mainly for
-          Flash based storage.
+          Flash based storage. CUNEDEMEK
+          
+config IOSCHED_ZEN
+	tristate "ZEN I/O scheduler"
+	default y
+	---help---
+	  This is an ZEN based I/O scheduler. It will try to distribute
+          IOPS equally among all processes in the system. It's mainly for
+          Flash based storage. CUNEDEMEK
 
 config CFQ_GROUP_IOSCHED
 	bool "CFQ Group Scheduling support"
@@ -79,13 +87,11 @@ choice
 		  Most suitable for mobile devices.
 
 	config DEFAULT_CFQ
-		bool "CFQ" if IOSCHED_CFQ=y
-		
-	config DEFAULT_FIOPS
-		bool "FIOPS" if IOSCHED_FIOPS=y
+		bool "CFQ" if IOSCHED_CFQ=y 
 
 	config DEFAULT_NOOP
 		bool "No-op"
+		
 
 endchoice
 
@@ -95,7 +101,6 @@ config DEFAULT_IOSCHED
 	default "row" if DEFAULT_ROW
 	default "cfq" if DEFAULT_CFQ
 	default "noop" if DEFAULT_NOOP
-	default "fiops" if DEFAULT_FIOPS
 
 endmenu
 
