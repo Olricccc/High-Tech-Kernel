@@ -215,6 +215,23 @@ config CPU_FREQ_GOV_CONSERVATIVE
 	  For details, take a look at linux/Documentation/cpu-freq.
 
 	  If in doubt, say N.
+	  
+	  config CPU_FREQ_GOV_INTELLLIACTIVE
+	tristate "'intelliactive' governor"
+	help
+	
+	  To compile this driver as a module, choose M here: the
+	  module will be called cpufreq_intelliactive.
+	  
+	   config CPU_FREQ_GOV_INTERACTIVE_PRO
+	tristate "'interactive_pro' governor"
+	help
+	
+	  To compile this driver as a module, choose M here: the
+	  module will be called cpufreq_interactive_pro.
+
+
+	 
 
 config CPU_BOOST
 	tristate "Event base short term CPU freq boost"
