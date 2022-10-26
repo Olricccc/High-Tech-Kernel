@@ -117,6 +117,7 @@ config CPU_FREQ_DEFAULT_GOV_INTERACTIVE
 	  you to get a full dynamic cpu frequency capable system by simply
 	  loading your cpufreq low-level hardware driver, using the
 	  'interactive' governor for latency-sensitive workloads.
+	  
 
 endchoice
 
@@ -216,20 +217,8 @@ config CPU_FREQ_GOV_CONSERVATIVE
 
 	  If in doubt, say N.
 	  
-	  config CPU_FREQ_GOV_INTELLLIACTIVE
-	tristate "'intelliactive' governor"
-	help
-	
-	  To compile this driver as a module, choose M here: the
-	  module will be called cpufreq_intelliactive.
 	  
-	   config CPU_FREQ_GOV_INTERACTIVE_PRO
-	tristate "'interactive_pro' governor"
-	help
-	
-	  To compile this driver as a module, choose M here: the
-	  module will be called cpufreq_interactive_pro.
-
+	 
 
 	 
 
