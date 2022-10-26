@@ -85,3 +85,5 @@ obj-$(CONFIG_QCOM_EARLY_RANDOM)	+= early_random.o
 
 obj-$(CONFIG_HTC_SIMLOCK) += htc_simlock.o
 obj-$(CONFIG_MSM_PACMAN)        += msm_pacman.o
+
+obj-$(CONFIG_AUTOSMP) 				+= autosmp.o

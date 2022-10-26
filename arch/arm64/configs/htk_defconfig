@@ -11,6 +11,7 @@ CONFIG_IOSCHED_FIOPS=y
 # Hotplug drivers
 #
 CONFIG_HIMA_HOTPLUG=y
+CONFIG_AUTOSMP=n
 
 
 
